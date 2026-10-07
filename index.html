@@ -35,12 +35,12 @@ button{border:0;background:#198754;color:white;padding:14px 20px;border-radius:1
 </div></section>
 
 <section id="sell"><h2>📦 আপনার জিনিস বিক্রি করুন</h2>
-<div class="form"><div class="row"><input id="name" placeholder="আপনার নাম"><input id="phone" placeholder="মোবাইল নম্বর"></div>
+<div class="form"><div class="row"><input id="name" placeholder="আপনার নাম"><input id="phone" placeholder="email id"></div>
 <div class="row"><input id="item" placeholder="জিনিসের নাম"><input id="price" placeholder="দাম"></div>
 <input id="place" placeholder="Location"><textarea id="details" placeholder="জিনিসের বিস্তারিত"></textarea>
 <button onclick="sendWhatsApp()">WhatsApp-এ Listing পাঠান</button></div></section>
 
-<section id="contact"><h2>📞 Contact</h2><div class="card"><b>Jhargram Buy Sell</b><p>📍 Jhargram, West Bengal</p><p>📲 WhatsApp: নিজের নম্বর এখানে বসাতে হবে</p><p>▶️ YouTube: Jhargram Buy Sell</p></div></section>
+<section id="contact"><h2>📞 Contact</h2><div class="card"><b>Jhargram Buy Sell</b><p>📍 Jhargram, West Bengal</p><p>📲 Email id নিজের email id বসাতে হবে</p><p>▶️ YouTube: Jhargram Buy Sell</p></div></section>
 <footer>© 2026 Jhargram Buy Sell • Buy • Sell • Local Deals</footer>
 
 <script>
@@ -48,8 +48,8 @@ document.getElementById('search').addEventListener('input',e=>{
  let q=e.target.value.toLowerCase();
  document.querySelectorAll('#products .card').forEach(c=>c.style.display=c.dataset.name.includes(q)?'block':'none');
 });
-function sendWhatsApp(){
- const number='919999999999'; // এখানে নিজের WhatsApp নম্বর বসাও
+function send email (){
+ const number='919999999999'; // এখানে নিজের email id বসাও
  const text=`Jhargram Buy Sell-এ listing দিতে চাই।%0Aনাম: ${name.value}%0Aমোবাইল: ${phone.value}%0Aজিনিস: ${item.value}%0Aদাম: ₹${price.value}%0ALocation: ${place.value}%0Aবিস্তারিত: ${details.value}`;
  window.open('https://wa.me/'+number+'?text='+text,'_blank');
 }
